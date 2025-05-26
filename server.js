@@ -22,7 +22,7 @@ app.use((req, res, next) => {
 app.use('/', require('./routes'));
 
 
-// 404 handler - must come after all routes
+// 500 handler - must come after all routes
 app.use((req, res, next) => {
     next(createError(404, 'Not found'));
 });
