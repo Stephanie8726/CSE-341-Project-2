@@ -1,0 +1,41 @@
+// LOCALHOST
+### GET ALL CAR COLLECTIONS
+
+GET http://localhost:3000/cars
+
+
+### Get car collection by id
+GET http://localhost:3000/cars/683424fb10565735dc6b093d
+
+
+### Create car collection
+POST http://localhost:3000/cars HTTP/1.1
+content-type: application/json
+
+  {
+  "make": "Toyota",
+  "model": "Corolla",
+  "year": 2018,
+  "color": "Gold",
+  "price": 16400,
+  "mileage": 15000,
+  "vin": "2HGFC2F59KH51FTFW1E57PKF1234511234"
+  }
+
+
+### PUT/UPDATE car collection
+PUT http://localhost:3000/cars/683432960210523848fc30ee HTTP/1.1
+content-type: application/json
+
+{
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2020,
+    "color": "GRedold",
+    "price": 22000,
+    "mileage": 20000,
+    "vin": "1FTFW1E57PKF12345"
+}
+
+### DELETE car collection
+DELETE http://localhost:3000/cars/683432960210523848fc30ee
