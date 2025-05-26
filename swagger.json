@@ -2,7 +2,7 @@
   "swagger": "2.0",
   "info": {
     "title": "Car Collections Api",
-    "description": "Car Collections Api",
+    "description": "Car Collections Api", 
     "version": "1.0.0"
   },
   "host": "cse-341-project-2-l64f.onrender.com",
