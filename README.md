@@ -16,6 +16,8 @@ to start npm init (to create package json)
 to handle API error:    npm --save http-errors 
 add validation:         npm i --save express-validator
 
+node swagger.js - will auto generate update swagger
+
 
 ###### Tutorial Videos #######
 https://video.byui.edu/media/t/1_u8dzgu7e  --> Github Installation and Project Initialization
