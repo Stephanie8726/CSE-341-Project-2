@@ -29,7 +29,7 @@ const getSingleCar = async (req, res, next) => {
     const cars = await result.toArray();
 
     if (!cars.length) {
-      return next(createError(404, 'Cars not found.'));
+      return next(createError(404, 'Car not found.'));
     }
 
     res.setHeader('Content-Type', 'application/json');

@@ -7,6 +7,7 @@ router.get('/', (req, res) => {
     res.send('My 2nd Project - Car Collections'); 
 });
 
-router.use('/cars', require('./cars')); //will look for collections.js file under routes
+router.use('/cars', require('./cars')); //will look for cars.js file under routes
+router.use('/customers', require('./customers')); //will look for customers.js file under routes
 
 module.exports = router;

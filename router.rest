@@ -39,3 +39,48 @@ content-type: application/json
 
 ### DELETE car collection
 DELETE http://localhost:3000/cars/683432960210523848fc30ee
+
+
+
+#############################################################################################
+
+
+### GET ALL CUSTOMER'S DETAILS
+
+GET http://localhost:3000/customers
+
+
+### Get customers's info by id
+GET http://localhost:3000/customers/68374772fd1b5fe25914ec4d
+
+
+### Create customers's info
+POST http://localhost:3000/customers HTTP/1.1
+content-type: application/json
+
+  {
+  "firstName": "Juan",
+  "lastName": "Dela Cruz",
+  "phone": "09171234567",
+  "email": "juandelacruz@gmail.com",
+  "address": "Cebu City",
+  "dateOfBirth": "1985-08-15"
+  }
+
+
+### PUT/UPDATE customer's info
+PUT http://localhost:3000/customers/68374772fd1b5fe25914ec4d HTTP/1.1
+content-type: application/json
+
+{
+  "firstName": "Jay",
+  "lastName": "Cruz",
+    "phone": "09171234123",
+  "email": "jaycruz@gmail.com",
+  "address": "Cebu City",
+  "dateOfBirth": "1985-08-15",
+  "preferredContactMethod": "email"
+}
+
+### DELETE car collection
+DELETE http://localhost:3000/customers/68377062edc09d0eb6e9dc2e
