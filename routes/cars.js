@@ -3,6 +3,7 @@ const router = express.Router();
 const carsController = require("../controllers/cars");
 const { body, param } = require("express-validator");
 const validate = require("../middleware/validate");
+const  {isAuthenticated } = require('../middleware/authenticate');
 
 // GET all cars
 router.get("/", carsController.getAllCars);
@@ -69,6 +70,7 @@ router.post(
       .withMessage("VIN is required")
   ],
   validate,
+  isAuthenticated,
   carsController.createCarInfo
 );
 
@@ -128,6 +130,7 @@ router.put(
       .withMessage("VIN is required")
   ],
   validate,
+  isAuthenticated,
   carsController.updateCarInfo
 );
 
@@ -136,6 +139,7 @@ router.delete(
   "/:id",
   param("id").isMongoId().withMessage("Invalid car ID format"),
   validate,
+  isAuthenticated,
   carsController.deleteCarInfo
 );
 

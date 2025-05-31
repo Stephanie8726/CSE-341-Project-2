@@ -3,6 +3,7 @@ const router = express.Router();
 const customersController = require("../controllers/customers");
 const { body, param } = require("express-validator");
 const validate = require("../middleware/validate");
+const  {isAuthenticated } = require('../middleware/authenticate');
 
 // GET all customer details
 router.get("/", customersController.getAllCustomerInfo);
@@ -69,6 +70,7 @@ router.post(
       .withMessage("Preferred contact method must be one of: email, phone, sms")
   ],
   validate,
+  isAuthenticated,
   customersController.createCustomerInfo
 );
 // UPDATE customer info
@@ -125,6 +127,7 @@ router.put(
       .withMessage("Preferred contact method must be one of: email, phone, sms")
   ],
   validate,
+  isAuthenticated,
   customersController.updateCustomerInfo
 );
 
@@ -133,6 +136,7 @@ router.delete(
   "/:id",
   param("id").isMongoId().withMessage("Invalid customer ID format"),
   validate,
+  isAuthenticated,
   customersController.deleteCustomerInfo
 );
 
