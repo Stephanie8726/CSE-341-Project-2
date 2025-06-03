@@ -10,14 +10,14 @@ router.use('/customers', require('./customers')); //will look for customers.js f
 //authentication
 router.get('/login', passport.authenticate('github'), (req, res) => {});
 
-//GitHub OAuth callback route
-router.get('/auth/github/callback',
-  passport.authenticate('github', { failureRedirect: '/login' }),
-  (req, res) => {
-    // Successful authentication
-    res.redirect('/'); 
-  }
-)
+// //GitHub OAuth callback route
+// router.get('/auth/github/callback',
+//   passport.authenticate('github', { failureRedirect: '/login' }),
+//   (req, res) => {
+//     // Successful authentication
+//     res.redirect('/'); 
+//   }
+// )
 
 router.get('/logout', function(req, res, next) {
     req.logout(function(err) {
