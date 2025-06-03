@@ -70,7 +70,7 @@ app.get('/github/callback', passport.authenticate('github', {
         res.redirect('/');
     })  
 
-//routes
+//routes.
 // app.use('/', require('./routes'));
   app.use("/", require("./routes/index.js"));
 
