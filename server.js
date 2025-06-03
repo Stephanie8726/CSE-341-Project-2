@@ -83,8 +83,7 @@ app.get('/github/callback', passport.authenticate('github', {
     })  
 
 //routes
-// app.use('/', require('./routes'));
-app.use("/", require("./routes/index.js"));
+app.use('/', require('./routes'));
 
 
 // 500 handler - must come after all routes
@@ -111,11 +110,3 @@ mongodb.initDb((err) => {
         app.listen(port, () => {console.log(`Database is listening and node running on port ${port}`)});
     }
 });
-
-
-
-
-
-
-
-
