@@ -35,7 +35,7 @@ app
   })
   .use(cors({methods: ['GET', 'POST', 'DELETE', 'UPDATE', 'PUT', 'PATCH']}))
   .use(cors({ origin: '*' })) 
-  .use("/", require("./routes/index.js"));
+  // .use("/", require("./routes/index.js"));
 
   passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
@@ -72,6 +72,7 @@ app.get('/github/callback', passport.authenticate('github', {
 
 //routes
 // app.use('/', require('./routes'));
+  app.use("/", require("./routes/index.js"));
 
 
 // 500 handler - must come after all routes
