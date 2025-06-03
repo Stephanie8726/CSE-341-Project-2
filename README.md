@@ -63,3 +63,7 @@ git push origin main
 git rm -r --cached node_modules
 git rm --cached .env
 git rm -r --cached dist
+
+
+GITHUB COLLECTIONS
+settings --> developer settings -- github apps --> fill out --> add collections
