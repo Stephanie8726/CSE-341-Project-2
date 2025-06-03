@@ -10,18 +10,6 @@ const cors = require('cors');
 
 const port = process.env.PORT || 3000
 
-// the basic before adding the OAuth
-// app.use(bodyParser.json()); // should be placed above the routes
-// app.use((req, res, next) => {
-//     res.setHeader('Access-Control-Allow-Origin', '*');
-//     res.setHeader(
-//         'Access-Control-Allow-Headers',
-//         'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
-//     );
-//     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
-//     next();
-// });
-
 app
   .use(bodyParser.json())
   .use(session({

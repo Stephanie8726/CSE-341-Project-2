@@ -5,8 +5,8 @@ const doc = {
         title: 'Collections Api',
         description: 'Cars and Customers API'
     },
-    host: 'localhost:3000',
-    schemas: ['https', 'http']
+    host: 'cse-341-project-2-l64f.onrender.com',
+    schemas: ['https']
 };
 
 const outputfile = './swagger.json';
