@@ -6,7 +6,7 @@ const doc = {
         description: 'Cars and Customers API'
     },
     host: 'cse-341-project-2-l64f.onrender.com',
-    schemas: ['https']
+    schemes: ['https']
 };
 
 const outputfile = './swagger.json';
