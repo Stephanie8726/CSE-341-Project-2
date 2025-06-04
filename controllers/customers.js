@@ -46,7 +46,7 @@ const createCustomerInfo = async (req, res, next) => {
       lastName: req.body.lastName,
       phone: req.body.phone,
       email: req.body.email,
-      address: req.body.price,
+      address: req.body.address,
       dateOfBirth: req.body.dateOfBirth,
       preferredContactMethod: req.body.preferredContactMethod
     };
@@ -75,7 +75,7 @@ const updateCustomerInfo = async (req, res, next) => {
       lastName: req.body.lastName,
       phone: req.body.phone,
       email: req.body.email,
-      address: req.body.price,
+      address: req.body.address,
       dateOfBirth: req.body.dateOfBirth,
       preferredContactMethod: req.body.preferredContactMethod
     };
